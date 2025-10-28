@@ -4,8 +4,9 @@ Eine moderne, vollständige Full-Stack Webanwendung zur Verwaltung von Benutzern
 
 ## Live Demo
 
-*   **Frontend (Angular):** [https://user-management.andreas-web.dev]
-*   **Backend (Spring Boot):** [https://backend.andreas-web.dev/api]
+*   **Frontend (Angular):** [user-management.andreas-web.dev](https://user-management.andreas-web.dev)
+
+*   **Backend (Spring Boot):** [backend.andreas-web.dev/api](https://backend.andreas-web.dev/api)
 
 ## Features
 
@@ -104,14 +105,14 @@ Das Frontend läuft standardmäßig auf http://localhost:4200.
 | Method | Endpoint         | Description                 | Auth |
 |--------|------------------|-----------------------------|-------|
 | POST   | /api/auth/login  | Benutzeranmeldung + Token   | Nein  |
-| POST   | /api/auth/logout | Benutzerabmeldung           | Ja (JWT) |
+| POST   | /api/auth/logout | Benutzerabmeldung           | Nein  |
 | GET    | /api/auth/check  | Token-Validierung           | Ja (JWT) |
 | GET    | /api/users       | Liefert alle Benutzer       | Ja (JWT) |
 | POST   | /api/users       | Erstellt neuen Benutzer     | Ja (JWT) |
 | PUT    | /api/users/{id}  | Aktualisiert Benutzer       | Ja (JWT) |
 | DELETE | /api/users/{id}  | Löscht Benutzer             | Ja (JWT) |
 
-## System Architektur
+## Architekturdiagramm
 
 ```bash
 ┌─────────────────────────────────────────────────────────────────
@@ -125,12 +126,18 @@ Das Frontend läuft standardmäßig auf http://localhost:4200.
 │  │                                                              
 │  ├── 📁 components/                 # Reusable Components
 │  │    ├── user-list/                # AG Grid Komponente
-│  │    ├── user-form/                # User Bearbeitungsformular     
-│  │    └── toast/                    # Bootstrap Toast
+│  │    ├── user-form/                # User Bearbeitungsformular
+│  │    ├── delete-entity-modal/
+│  │    ├── toast/
+│  │    ├── spinner/
+│  │    ├── pagination/
+│  │    ├── search/
+│  │    ├── header/
+│  │    └── footer/
 │  │                                                              
 │  ├── 📁 services/                  # Business Logik
 │  │    ├── auth-api                  # Login/Logout/Token-Check
-│  │    ├── user-api                  # CRUD Operations
+│  │    └── user-api                  # CRUD Operations
 │  │                                                              
 │  ├── 📁 stores/                    # State Management (Signals)
 │  │    ├── pagination-store
@@ -176,7 +183,7 @@ Das Frontend läuft standardmäßig auf http://localhost:4200.
 │  ├── 📁 repository/              # Data Access Layer
 │  │    └── UserRepository
 │  │                                                                
-│  ├── 📁 service/                 # Business Logic
+│  ├── 📁 service/                 # Business Logik
 │  │    └── UserService
 │  │                                                            
 │  ├── 📁 security/                # SecurityConfig (JWT Authentication, CORS, Stateless Sessions)
