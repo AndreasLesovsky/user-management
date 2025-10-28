@@ -1,0 +1,7 @@
+<button type="button" class="btn btn-light text-dark me-2" (click)="logout()">
+  @if (loading()) {
+  <app-spinner></app-spinner>
+  } @else {
+  Logout
+  }
+</button>

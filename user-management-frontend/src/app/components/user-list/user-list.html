@@ -1,0 +1,14 @@
+<section class="container-fluid py-5">
+  <ag-grid-angular
+  class="ag-theme-alpine"
+  [rowData]="pagedUsers()"
+  [columnDefs]="columns"
+  [pagination]="false"
+  [domLayout]="'autoHeight'"
+  (cellValueChanged)="onCellValueChanged($event)"
+  style="width: 100%;">
+</ag-grid-angular>
+
+  <app-pagination></app-pagination>
+</section>
+<app-delete-entity-modal></app-delete-entity-modal>

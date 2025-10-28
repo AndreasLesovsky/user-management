@@ -1,0 +1,85 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Global
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+
+# Angular Frontend
+user-management-frontend/node_modules/
+user-management-frontend/dist/
+user-management-frontend/.angular/
+user-management-frontend/.env
+user-management-frontend/.env.local
+user-management-frontend/.env.*.local
+user-management-frontend/tmp
+user-management-frontend/out-tsc
+user-management-frontend/bazel-out
+user-management-frontend/src/app/config/api.config.ts
+
+# Editor / IDE
+user-management-frontend/.vscode/
+user-management-frontend/.idea/
+
+# Spring Boot Backend
+user-management-rest-service/src/main/resources/application.properties
+user-management-rest-service/target/
+user-management-rest-service/.gradle/
+user-management-rest-service/build/
+user-management-rest-service/out/
+user-management-rest-service/.env
+user-management-rest-service/.classpath
+user-management-rest-service/.project
+user-management-rest-service/.settings/
+user-management-rest-service/.idea/
+user-management-rest-service/.vscode/
+user-management-rest-service/logs/
+user-management-rest-service/*.log
+
+# Java / Maven / Gradle
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+
+# OS / Misc
+*.swp
+*.swo
+*~

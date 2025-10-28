@@ -1,0 +1,18 @@
+.active, .nav-link:hover {
+  color: #0b5eda !important;
+  background-color: #f8f8f8;
+}
+
+.nav-link {
+    transition: all .4s ease;
+}
+
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    width: 100% !important;
+    text-align: center;
+    border-bottom: 0.5px solid #b5b5b5;
+    padding-block: 0.75rem;
+  }
+}

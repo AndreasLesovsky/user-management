@@ -1,0 +1,43 @@
+<div class="px-3 bg-body-secondary border-bottom">
+  <div class="container-fluid">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-start">
+      <a routerLink="/" class="d-block d-md-flex align-items-center me-md-auto text-decoration-none navbar-brand">
+        <i class="bi bi-person-workspace" style="font-size: 24px;"></i>
+        <span class="fs-4 ms-2">User Management</span>
+      </a>
+      <ul class="nav col-12 col-md-auto justify-content-center text-small gap-1">
+        <li>
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+            class="nav-link text-black d-flex flex-column align-items-center">
+            <i class="bi bi-house d-block mx-auto mb-1" style="font-size: 24px;" aria-hidden="true"></i>
+            Home
+          </a>
+        </li>
+        <li>
+          <a routerLink="/dashboard" routerLinkActive="active"
+            class="nav-link text-black d-flex flex-column align-items-center">
+            <i class="bi bi-speedometer2 d-block mx-auto mb-1" style="font-size: 24px;" aria-hidden="true"></i>
+            Dashboard
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+@if (auth.loginSuccess() === true && isDashboard()) {
+<div class="px-3 py-2 bg-body-tertiary border-bottom">
+  <div class="container-fluid d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center gap-2">
+    <div class="d-flex flex-wrap justify-content-center justify-content-md-start align-items-center gap-2">
+      <app-search></app-search>
+      <app-pagination-size></app-pagination-size>
+    </div>
+    
+    <div class="d-flex flex-wrap justify-content-center justify-content-md-end align-items-center gap-2 order-first order-md-last">
+      <app-logout-btn></app-logout-btn>
+      <button routerLink="/dashboard/users/new" class="btn btn-primary">
+        Create User
+      </button>
+    </div>
+  </div>
+</div>
+}

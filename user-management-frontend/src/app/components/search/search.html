@@ -1,0 +1,14 @@
+<div class="mb-0">
+  <label for="search" class="form-label mb-0">
+    Search
+  </label>
+  <input
+    #searchInput
+    type="search"
+    class="form-control"
+    id="search"
+    placeholder="Search by Name..."
+    [value]="searchStore.searchQuery()"
+    (input)="onSearchChange($event.target.value)"
+  />
+</div>
