@@ -72,7 +72,6 @@ cd user-management-rest-service
 Die Datei application.example.properties als application.properties kopieren und sicherstellen, dass die richtigen DB-Zugangsdaten eingetragen sind.
 
 #### Backend starten
-
 ```bash
 ./mvnw spring-boot:run
 ```
@@ -82,16 +81,13 @@ Das Backend läuft standardmäßig auf http://localhost:8080.
 ### 2. Frontend starten
 
 #### In ein neues Terminal wechseln
-
 ```bash
 cd user-management-frontend
 ```
 #### Abhängigkeiten installieren
-
 ```bash
 npm install
 ```
-
 #### Entwicklungsserver starten
 
 ```bash
@@ -118,12 +114,12 @@ Das Frontend läuft standardmäßig auf http://localhost:4200.
 ┌─────────────────────────────────────────────────────────────────
 │                        CLIENT (Angular 20)                      
 ├─────────────────────────────────────────────────────────────────
-│  src/app/                                                       
+│  src/app/
 │  ├── 📁 pages/                     # Routable Components
 |  |    ├── home/
 │  │    ├── login
 │  │    └── dashboard/
-│  │                                                              
+│  │
 │  ├── 📁 components/                 # Reusable Components
 │  │    ├── user-list/                # AG Grid Komponente
 │  │    ├── user-form/                # User Bearbeitungsformular
@@ -148,14 +144,14 @@ Das Frontend läuft standardmäßig auf http://localhost:4200.
 │  │    └── auth-guard                # JWT Validation
 │  │                                                              
 │  ├── 📁 interceptors/              # HTTP Handling
-│  │    ├── error-interceptor         # Fängt Fehler auf und setzt die signals im message-store            
+│  │    ├── error-interceptor         # Fängt Fehler auf und setzt die signals im message-store
 │  │    └── loading-interceptor       # Loading Spinner
 │  │                                                              
 │  ├── 📁 models/                    # TypeScript Interfaces
 |  |    ├── app-message              # Message Interface für Toast Komponente
 │  │    ├── user-input               # User Input Model entspticht dto aus dem Backend
-│  │    └── user-output              # User Output Model entspticht dto aus dem Backend 
-│  │                                                              
+│  │    └── user-output              # User Output Model entspticht dto aus dem Backend
+│  │ 
 │  └── 📁 utils/                     # Utilities
 │       └── messages                 # Messages für error-interceptor
 └─────────────────────────────────────────────────────────────────
@@ -176,16 +172,16 @@ Das Frontend läuft standardmäßig auf http://localhost:4200.
 │  │    ├── LoginRequestDto
 │  │    ├── LoginResponseDto
 │  │    └── UserWithTokenDto
-│  │                                                               
+│  │      
 │  ├── 📁 entity/                  # JPA Entities
 │  │    └── User
-│  │                                                                
+│  │ 
 │  ├── 📁 repository/              # Data Access Layer
 │  │    └── UserRepository
-│  │                                                                
+│  │
 │  ├── 📁 service/                 # Business Logik
 │  │    └── UserService
-│  │                                                            
+│  │
 │  ├── 📁 security/                # SecurityConfig (JWT Authentication, CORS, Stateless Sessions)
 │  │    ├── JwtUtil
 │  │    ├── JwtAuthenticationFilter
@@ -204,21 +200,19 @@ Das Frontend läuft standardmäßig auf http://localhost:4200.
                                 │
                                 │ JDBC
                                 ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                     DATABASE (MySQL)                            │
-├─────────────────────────────────────────────────────────────────┤
-│  ┌─────────────────┐                                            │
-│  │   tbl_users     │                                            │
-│  ├─────────────────┤                                            │
-│  │ id (PK)         │                                            │
-│  │ username        │                                            │
-│  │ email (UNIQUE)  │                                            │
-│  │ password_hash   │                                            │
-│  │ first_name      │                                            │
-│  │ last_name       │                                            │
-│  │ created_at      │                                            │
-│  │ updated_at      │                                            │
-│  └─────────────────┘                                            │
+┌─────────────────────────────────────────────────────────────────
+│                     DATABASE (MySQL)                            
+├─────────────────────────────────────────────────────────────────
+│  ┌─────────────────┐
+│  │   tbl_users     │
+│  ├─────────────────┤
+│  │ id (PK)         │
+│  │ name            │
+│  │ email (UNIQUE)  │
+│  │ password_hash   │
+│  │ created_at      │
+│  │ updated_at      │ 
+│  └─────────────────┘ 
 └─────────────────────────────────────────────────────────────────┘
 ```
 
