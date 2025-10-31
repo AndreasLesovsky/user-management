@@ -45,7 +45,7 @@ export class AuthApi {
   async logout(): Promise<any> {
     try {
       const response: any = await firstValueFrom(
-        this.http.post(`${this.apiUrl}/logout`, {}, { headers: this.getAuthHeaders() })
+        this.http.post(`${this.apiUrl}/logout`, {}) // Header entfernt
       );
       localStorage.removeItem('token');
       this.loginSuccess.set(null);
